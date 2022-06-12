@@ -54,5 +54,22 @@ public class AddressBook {
             }
         }
     }
+    void deleteContact()
+    {
+        System.out.println("Enter First Name of Contact to delete");
+        String fNameRequest = scanner.next();
+        for (Contacts contact:contacts) {
+            if(fNameRequest.equals(contact.getFirstName()))
+            {
+                contacts.remove(contact);
+                break;
+            }
+            else
+            {
+                System.out.println("Invalid First Name");
+            }
+        }
+    }
+
 
 }

@@ -6,10 +6,10 @@ import java.util.Scanner;
 
 public class AddressBook {
     List<Contacts> contacts=new ArrayList<>();
-    Contacts contact=new Contacts();
     Scanner scanner = new Scanner(System.in);
     void addContact()
     {
+        Contacts contact=new Contacts();
      System.out.println("Enter First Name");
      String fName=scanner.next();
      contact.setFirstName(fName);
@@ -35,5 +35,24 @@ public class AddressBook {
      String email=scanner.next();
      contact.setEmail(email);
      contacts.add(contact);
+
     }
+
+    void editContactWish()
+    {
+     System.out.println("Enter First Name of Contact to edit");
+     String fNameRequest = scanner.next();
+        for (Contacts contact:contacts) {
+            if(fNameRequest.equals(contact.getFirstName()))
+            {
+                contact.editContact();
+                break;
+            }
+            else
+            {
+                System.out.println("Invalid First Name");
+            }
+        }
+    }
+
 }

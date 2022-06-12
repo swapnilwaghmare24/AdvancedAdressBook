@@ -5,9 +5,11 @@ public class AddressBookMain {
         System.out.println("Welcome to Address Book Program");
         AddressBook addressBook=new AddressBook();
         addressBook.addContact();
-        for (Contacts contact:addressBook.contacts)
+        addressBook.addContact();
+        addressBook.editContactWish();
+        for (Contacts c:addressBook.contacts)
         {
-           System.out.println(contact);
+           System.out.println(c);
         }
     }
 }

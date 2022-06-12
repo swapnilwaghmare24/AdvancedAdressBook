@@ -7,6 +7,17 @@ import java.util.Scanner;
 public class AddressBook {
     List<Contacts> contacts=new ArrayList<>();
     Scanner scanner = new Scanner(System.in);
+
+    public String getAddressBookName() {
+        return addressBookName;
+    }
+
+    public void setAddressBookName(String addressBookName) {
+        this.addressBookName = addressBookName;
+    }
+
+    String addressBookName;
+
     void addContact()
     {
         Contacts contact=new Contacts();
@@ -48,10 +59,6 @@ public class AddressBook {
                 contact.editContact();
                 break;
             }
-            else
-            {
-                System.out.println("Invalid First Name");
-            }
         }
     }
     void deleteContact()
@@ -64,10 +71,7 @@ public class AddressBook {
                 contacts.remove(contact);
                 break;
             }
-            else
-            {
-                System.out.println("Invalid First Name");
-            }
+
         }
     }
 

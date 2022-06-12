@@ -6,7 +6,8 @@ public class AddressBookMain {
         AddressBook addressBook=new AddressBook();
         addressBook.addContact();
         addressBook.addContact();
-        addressBook.editContactWish();
+       // addressBook.editContactWish();
+        addressBook.deleteContact();
         for (Contacts c:addressBook.contacts)
         {
            System.out.println(c);
